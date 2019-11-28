@@ -1,0 +1,15 @@
+<div class="container">
+
+    <h5>*ngIf Demonstration</h5>
+
+    <label>Server name for ngIf Demo : </label>
+
+    <input type="text" class="form-control" [(ngModel)]='ngIfDemoServerName' (input)="onSearchChange($event.target.value)"/><br>
+
+    <button class="btn btn-primary" (click)='printData()' [disabled]="!ngIfDemoServerName">Create Server</button><br />
+    
+    <p *ngIf = ' printTextData ; else noServerAvailable' > Your Server Name is : {{ngIfDemoServerName}}</p>
+    
+    <ng-template #noServerAvailable> Sorry! No server available!!</ng-template>
+
+</div>

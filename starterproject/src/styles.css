@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+.navbar-nav{
+    background-color: #040E93;
+}
+.navbar-inverse{
+    background-color: #040E93;
+}
+.nav{
+    background-color: #040E93;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: #1a1aff;
+}
+.container{
+    margin-top: 55px;
+}       

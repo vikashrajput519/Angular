@@ -1,0 +1,23 @@
+<div class="container">
+    
+    <!-- ngModel Demo -->
+    <h5>ngModel Demo</h5>
+    <label>Enter your text : </label>
+    <input type="text" class="form-control" [(ngModel)]="name" /><br><br>
+    <p>Your text is here : {{name}}</p>
+    <hr>
+  
+    <!-- String Interpolation -->
+    <h5>String Interpolation And Timeout Demo</h5>
+    <button class="btn btn-primary" [disabled]='isDisabled' (click)='onCreateServer()'>Create Server</button><br />
+    <p>{{serverCreateMsg}}</p>
+    <hr>
+  
+    <!-- Property Binding And Event Demo -->
+    <h5>Property Binding And Event Demo</h5>
+    <label>Server name : </label>
+    <input type="text" class="form-control" (input)="updateServerName($event)" /><br>
+    <p>Your server Name : {{serverName}}</p>
+    <hr>  
+    
+  </div>
