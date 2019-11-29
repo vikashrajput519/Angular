@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Recepe } from 'src/app/model/recipe.model';
 
 @Component({
 
