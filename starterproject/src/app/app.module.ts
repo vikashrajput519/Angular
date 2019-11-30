@@ -15,6 +15,7 @@ import { RecipeListComponent } from '../app/project/recipe/recipe-list/recipe-li
 import { RecipeItemComponent } from '../app/project/recipe/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './project/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './project/shopping-list/shopping-edit/shopping-edit.component';
+import { Debugging } from './debugging/debugging.component';
 
 const appRoutes: Routes = [
   { path : '', component : HomeComponent },
@@ -27,11 +28,7 @@ const appRoutes: Routes = [
   { path : 'receipeItems', component : RecipeItemComponent },
   { path : 'shoppingList', component : ShoppingListComponent },
   { path : 'shoppingEdit', component : ShoppingEditComponent },
-];
-
-const internalAppRoutes: Routes = [
-  { path : '', component : ReceipeComponent },
-  
+  { path : 'debug', component : Debugging },
 ];
 
 @NgModule({
@@ -46,7 +43,8 @@ const internalAppRoutes: Routes = [
     RecipeListComponent,
     RecipeItemComponent,
     ShoppingListComponent,
-    ShoppingEditComponent
+    ShoppingEditComponent,
+    Debugging
   ],
   imports: [
     BrowserModule,
