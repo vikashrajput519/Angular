@@ -12,7 +12,7 @@ import { CockpitComponent } from './databinding/cockpit/cockpit.component';
 import { DatabindingHomeComponent } from './databinding/databinding-home/databinding-home.component';
 import { ServerElementComponent } from './databinding/server-element/server-element.component';
 
-const appRoutes: Routes = [
+const appRoutes : Routes  = [
   { path : '', component : HomeComponent },
   { path : 'basic', component : BasicComponent },
   { path : 'basicProject', component : BasicProjectComponent },
