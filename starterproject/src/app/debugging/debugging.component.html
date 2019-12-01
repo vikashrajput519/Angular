@@ -1,7 +1,24 @@
 <div class="container">
-<button type="button" class="btn btn-primary">Add Server</button>
-<hr>
-<div class="">
-
-</div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>My Server</h1>
+            <button type="button" class="btn btn-primary" (click)="onClickObject()">Add Server</button>
+            <hr>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let server of servers let i = index" (click)="removeOnclick(i)">
+                    <h4>{{server}}</h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <!-- <div class="row">
+        <div class="col-xs-12">
+            <div class="list-group">
+                <div class="list-group-item" (click)='removeOnclick()' *ngFor="let server of servers let i = index">
+                        <h4>{{server}}</h4>
+                </div>
+            </div>
+        </div>
+    </div> -->
 </div>
