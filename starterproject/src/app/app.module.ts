@@ -10,6 +10,7 @@ import { BasicProjectComponent } from './basicproject/basicproject.component';
 import { Debugging } from './debugging/debugging.component';
 import { CockpitComponent } from './databinding/cockpit/cockpit.component';
 import { DatabindingHomeComponent } from './databinding/databinding-home/databinding-home.component';
+import { ServerElementComponent } from './databinding/server-element/server-element.component';
 
 const appRoutes: Routes = [
   { path : '', component : HomeComponent },
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     BasicProjectComponent,
     Debugging,
     CockpitComponent,
-    DatabindingHomeComponent
+    DatabindingHomeComponent,
+    ServerElementComponent
   ],
   imports: [
     BrowserModule,
