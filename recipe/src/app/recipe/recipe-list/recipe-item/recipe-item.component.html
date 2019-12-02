@@ -1,0 +1,10 @@
+<a href="#" class="list-group-item clearfix" >
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{recipeEl.name}}</h4>
+        <p class="list-group-item-text">{{recipeEl.description}}</p>
+    </div>
+    <span class="pull-right">
+        <!-- Property binding on src we can use String interpolation as well here -->
+        <img [src]="recipeEl.imagePath" alt="{{recipeEl.imagePath}}" class="img-responsive" style="max-height: 50px;">
+    </span>
+</a>

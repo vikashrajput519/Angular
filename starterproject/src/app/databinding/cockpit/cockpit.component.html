@@ -2,8 +2,9 @@
     <div class="col-xs-12">
         <p>Add new server or Blueprints</p>
         <label>Server Name</label>
-        <input type="text" class="form-control" [(ngModel)]="newServerName">
-        <label>Server Content</label>
+        <input type="text" class="form-control" [(ngModel)]="newServerName" #serverNameTest >
+        <!-- #serverNameTes -- We can use this to get the value from input And in component also we can use this property as @ViewChild('serverNameTes') -->
+        <label serverNameTest.value> Server Content </label>
         <input type="text" class="form-control" [(ngModel)]="newServerContent">
         <br>
         <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
