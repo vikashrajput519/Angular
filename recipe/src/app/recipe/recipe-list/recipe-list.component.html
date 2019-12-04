@@ -1,29 +1,33 @@
-        <div class="row" style="margin-top: 60px;">
-            <div class="col-xs-12">
-                <button class="btn btn-success" *ngIf='!enableRecipeFormSection' (click)='addNewRecipeButtonClick()'>New Recipe</button>
-            </div>
-        </div>
-        <div class="row" *ngIf='enableRecipeFormSection'>
-            <div class="form-group">
-                <label for="recipeName">Recipe Name</label>
-                <input type="text" [(ngModel)] = 'recipeName' class="form-control">
-            </div>
-            <div class="form-group">
-                    <label for="description">Description</label>
-                    <input type="text" [(ngModel)] ="description" class="form-control">
-            </div>
-            <div class="form-group">
-                    <label for="imagePath">Image Path</label>
-                    <input type="text" [(ngModel)] ="imagePath" class="form-control">
-            </div>
-            <div class="pull-right">
-                <button class="btn btn-primary" type="submit" (click) = 'addRecipe()' >Add Recipe</button>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-xs-12">
-            <recipe-item *ngFor='let recipeItem of recipes' [recipe] = 'recipeItem' (listItemSelected) = 'listSelectedItemEmited(recipeItem)'></recipe-item>
-        </div>
-        </div>
-        
+<div class="row" style="margin-top: 60px;">
+    <div class="col-xs-12">
+        <button class="btn btn-success" *ngIf='!enableRecipeFormSection' (click)='addNewRecipeButtonClick()'>New
+            Recipe</button>
+    </div>
+</div>
+<div class="row" *ngIf='enableRecipeFormSection'>
+    <div class="form-group">
+        <label for="recipeName">Recipe Name</label>
+        <input type="text" [(ngModel)]='recipeName' class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" [(ngModel)]="description" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="imagePath">Image Path</label>
+        <input type="text" [(ngModel)]="imagePath" class="form-control">
+    </div>
+    <div class="pull-right">
+        <button class="btn btn-primary" type="submit" (click)='addRecipe()'>Add Recipe</button>
+    </div>
+    <div class="pull-left">
+        <button class="btn btn-success" type="button" (click)='clear()'>Add Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <recipe-item *ngFor='let recipeItem of recipes' [recipe]='recipeItem'
+            (listItemSelected)='listSelectedItemEmited(recipeItem)'></recipe-item>
+    </div>
+</div>

@@ -6,7 +6,7 @@
     <div class="col-md-7" style="margin-top: 100px;">
             <recipe-detail *ngIf='recipe else infoText' [selectedRecipe] = 'recipe'></recipe-detail>
             <ng-template #infoText>
-                <p>No Recipe Selected.</p>
+                <p><span style="color: blue; font-size: 30px; font-weight: bold;">Please select Recipe for details.</span></p>
             </ng-template>
     </div>
 </div>
