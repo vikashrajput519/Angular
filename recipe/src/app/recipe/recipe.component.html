@@ -1,7 +1,7 @@
 <div class="container">
 <div class="row">
     <div class="col-md-5">
-            <recipe-list (listItemSeletedWasEmitted) = 'listItemRecived($event)'></recipe-list>
+            <recipe-list (listItemSeletedWasEmitted) = 'listItemReceived($event)'></recipe-list>
     </div>
     <div class="col-md-7" style="margin-top: 100px;">
             <recipe-detail *ngIf='recipe else infoText' [selectedRecipe] = 'recipe'></recipe-detail>

@@ -17,7 +17,7 @@ export class ReceipeComponent implements OnInit {
         
     }
 
-    listItemRecived(recipe : Recipe)
+    listItemReceived(recipe : Recipe)
     {
         this.recipe = recipe;
         console.log(recipe.name);
