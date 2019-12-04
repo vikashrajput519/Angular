@@ -44,6 +44,10 @@ export class RecipeListComponent implements OnInit {
         this.description = '';
         this.imagePath = '';
     }
+    hideSection()
+    {
+        this.enableRecipeFormSection = false;
+    }
 
     listSelectedItemEmited(recipe : Recipe)
     {

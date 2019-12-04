@@ -17,11 +17,11 @@
         <label for="imagePath">Image Path</label>
         <input type="text" [(ngModel)]="imagePath" class="form-control">
     </div>
-    <div class="pull-right">
+    <!-- <div class="pull-right" >  -->
+    <div>
         <button class="btn btn-primary" type="submit" (click)='addRecipe()'>Add Recipe</button>
-    </div>
-    <div class="pull-left">
-        <button class="btn btn-success" type="button" (click)='clear()'>Add Recipe</button>
+        <button class="btn btn-primary" type="button" (click)='clear()' style="margin-left: 10px;">Clear</button>
+        <button class="btn btn-primary" type="button" (click)='hideSection()' style="margin-left: 10px;">Hide Section</button>
     </div>
 </div>
 <hr>

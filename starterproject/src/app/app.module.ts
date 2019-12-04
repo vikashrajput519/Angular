@@ -12,6 +12,7 @@ import { CockpitComponent } from './databinding/cockpit/cockpit.component';
 import { DatabindingHomeComponent } from './databinding/databinding-home/databinding-home.component';
 import { ServerElementComponent } from './databinding/server-element/server-element.component';
 import { DirectiveComponent } from './directive/directive.component';
+import { HighLighterDirective } from './directive/custom/high-lighter.directive';
 
 const appRoutes : Routes  = [
   { path : '', component : HomeComponent },
@@ -33,6 +34,7 @@ const appRoutes : Routes  = [
     DatabindingHomeComponent,
     ServerElementComponent,
     DirectiveComponent,
+    HighLighterDirective
 
   ],
   imports: [

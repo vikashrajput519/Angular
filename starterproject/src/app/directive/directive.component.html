@@ -1,1 +1,25 @@
-<p>directive works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3><b>Directives</b></h3>
+            <button type="button" class="btn btn-primary" (click)='onButtonClick()'> {{text}}</button>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div *ngIf="isEvenNumber">
+            <div class="col-xs-12" *ngFor="let num of evenNumberArray">
+                <div>
+                    <p>{{num}}</p>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!isEvenNumber">
+            <div class="col-xs-12" *ngFor="let num of oddNumberArray">
+                <div>
+                    <p>{{num}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
