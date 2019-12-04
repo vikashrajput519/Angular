@@ -11,6 +11,7 @@ import { Debugging } from './debugging/debugging.component';
 import { CockpitComponent } from './databinding/cockpit/cockpit.component';
 import { DatabindingHomeComponent } from './databinding/databinding-home/databinding-home.component';
 import { ServerElementComponent } from './databinding/server-element/server-element.component';
+import { DirectiveComponent } from './directive/directive.component';
 
 const appRoutes : Routes  = [
   { path : '', component : HomeComponent },
@@ -18,6 +19,7 @@ const appRoutes : Routes  = [
   { path : 'basicProject', component : BasicProjectComponent },
   { path : 'debug', component : Debugging },
   { path : 'databinding', component : DatabindingHomeComponent },
+  { path : 'directive', component : DirectiveComponent }
 ];
 
 @NgModule({
@@ -29,7 +31,9 @@ const appRoutes : Routes  = [
     Debugging,
     CockpitComponent,
     DatabindingHomeComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    DirectiveComponent,
+
   ],
   imports: [
     BrowserModule,

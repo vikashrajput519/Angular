@@ -9,19 +9,24 @@ import { Recipe } from 'src/app/model/recipe.model';
 
 export class RecipeItemComponent implements OnInit{
 
+//     Way to Define Recipe Array
+//    recipes : Recipe[] =[
+//     new Recipe('Prons Bhujiya', 'A delicious Prons item', 'https://cdn.pixabay.com/photo/2018/10/31/12/37/healthy-food-3785722_960_720.jpg'),
+//     new Recipe('Prons Bhujiya', 'A delicious Prons item', 'https://cdn.pixabay.com/photo/2018/10/31/12/37/healthy-food-3785722_960_720.jpg')
+//    ];
+
     @Input()
     recipe : Recipe;
     
     @Output()
-    recipeSelected = new EventEmitter<void>();
+    listItemSelected = new EventEmitter<void>();
 
     ngOnInit()
     {
-
     }
 
-    onSelectListItem()
+    emitsListItemClick()
     {
-        this.recipeSelected.emit();
+        this.listItemSelected.emit();
     }
 }

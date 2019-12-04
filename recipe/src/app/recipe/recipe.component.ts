@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Recipe } from '../model/recipe.model';
 
 @Component({
@@ -11,9 +11,15 @@ import { Recipe } from '../model/recipe.model';
 
 export class ReceipeComponent implements OnInit {
 
-    selectedRecipe : Recipe;
+    recipe : Recipe;
+
     ngOnInit() {
         
     }
 
+    listItemRecived(recipe : Recipe)
+    {
+        this.recipe = recipe;
+        console.log(recipe.name);
+    }
 }

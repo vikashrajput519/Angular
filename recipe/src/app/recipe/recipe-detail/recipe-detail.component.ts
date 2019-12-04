@@ -8,10 +8,10 @@ import { Recipe } from 'src/app/model/recipe.model';
 })
 
 export class RecipeDetailComponent implements OnInit{
-
-    @Input()
-    recipe : Recipe;
   
+    @Input()
+    selectedRecipe : Recipe;
+    
     ngOnInit()
     {
 
