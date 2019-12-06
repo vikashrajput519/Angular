@@ -12,6 +12,7 @@ import { RecipeListComponent } from './recipe/recipe-list/recipe-list.component'
 import { RecipeItemComponent } from './recipe/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { DropDownDirective } from './directive/dropdown-directive';
 
 const appRoutes: Routes = [
   { path : '', component : HomeComponent },
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
     HeaderComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
+    DropDownDirective
   ],
   imports: [
     BrowserModule,

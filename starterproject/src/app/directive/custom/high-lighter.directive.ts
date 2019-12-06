@@ -1,10 +1,18 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[appHighLighter]'
+  // For making selector as attribute we generally keep the selector in []
+  selector : '[highlighter]'
 })
-export class HighLighterDirective {
+export class HighLighterDirective implements OnInit{
+  
+  constructor( private elementRef : ElementRef)
+  {
 
-  constructor() { }
+  }
+ 
+  ngOnInit() {
+    this.elementRef.nativeElement.style.backgroundColor = 'yellow';
+  }
 
 }
