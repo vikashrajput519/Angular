@@ -1,0 +1,13 @@
+<div class="container">
+        <h1>Notes:</h1>
+        <p><b>#.</b> If text field is blank then button should be disable. To achive this functionality we should write below code.</p>
+        <p>In input text file we will have to use two way data binding i.e <b>[(ngModel)] = 'textData'</b> then in button <b>[disabled]='!textData'</b>. eg: </p>
+        
+
+        <p><b>#.</b> If we want to perform any perform any operation on text empty then we use below code.</p>
+        <pre><input type="text" class="form-control" [(ngModel)]='ngIfDemoServerName' (input)="onSearchChange($event.target.value)"/ ></pre>
+
+        <p>Testing</p>
+        <header-app></header-app>
+        <recipe-app></recipe-app>
+</div>
