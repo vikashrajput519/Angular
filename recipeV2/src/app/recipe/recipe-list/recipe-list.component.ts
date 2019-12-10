@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Recipe } from 'src/app/model/recipe.model';
+import { RecipeService } from 'src/app/service/recipe.service';
 
 @Component({
     selector: 'recipe-list',
@@ -10,7 +11,7 @@ import { Recipe } from 'src/app/model/recipe.model';
 export class RecipeListComponent implements OnInit {
 
     // If we will use ony recipes : Recipe [] then push will not work on this since array is not yet initiated so use like below;
-    recipes: Recipe[] = [];
+    recipes: Recipe[];
 
     enableRecipeFormSection = false;
 
@@ -18,16 +19,13 @@ export class RecipeListComponent implements OnInit {
     description : string;
     imagePath : string;
 
-    @Output()
-    listItemSeletedWasEmitted = new EventEmitter<Recipe>();
-
-    ngOnInit() {
-        this.recipes.push(new Recipe('Mutton Tandoor','A deloicious Indian Mutton tandoor','https://cdn.pixabay.com/photo/2016/06/15/19/09/food-1459693_1280.jpg'));
-        this.recipes.push(new Recipe('Prons salad', 'Helathy Prons salad', 'https://upload.wikimedia.org/wikipedia/commons/3/39/Recipe.jpg'));
-        this.recipes.push(new Recipe('Prons Bhujiya', 'A delicious Prons item', 'https://cdn.pixabay.com/photo/2018/10/31/12/37/healthy-food-3785722_960_720.jpg'));
-        this.recipes.push(new Recipe('Fish Fry','Delicious Fish Fry','https://p1.pxfuel.com/preview/949/796/952/food-recipe-delicious-breakfast-lunch-dinner.jpg'));
+    constructor(private recipeService : RecipeService) {
     }
 
+    ngOnInit()
+    {
+        this.recipes = this.recipeService.getRecipes();
+    }
     addNewRecipeButtonClick() {
         this.enableRecipeFormSection = true;
     }
@@ -47,10 +45,5 @@ export class RecipeListComponent implements OnInit {
     hideSection()
     {
         this.enableRecipeFormSection = false;
-    }
-
-    listSelectedItemEmited(recipe : Recipe)
-    {
-        this.listItemSeletedWasEmitted.emit(recipe);
     }
 }

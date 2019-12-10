@@ -13,6 +13,8 @@ import { DatabindingHomeComponent } from './databinding/databinding-home/databin
 import { ServerElementComponent } from './databinding/server-element/server-element.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { HighLighterDirective } from './directive/custom/high-lighter.directive';
+import { RoutingAdvanceComponent } from './routing-advance/routing-advance.component';
+import { ObservablesComponent } from './observables/observables.component';
 
 const appRoutes : Routes  = [
   { path : '', component : HomeComponent },
@@ -20,7 +22,9 @@ const appRoutes : Routes  = [
   { path : 'basicProject', component : BasicProjectComponent },
   { path : 'debug', component : Debugging },
   { path : 'databinding', component : DatabindingHomeComponent },
-  { path : 'directive', component : DirectiveComponent }
+  { path : 'directive', component : DirectiveComponent },
+  { path : 'routingAdvance', component : RoutingAdvanceComponent },
+  {path : 'observables' , component : ObservablesComponent }
 ];
 
 @NgModule({
@@ -34,7 +38,9 @@ const appRoutes : Routes  = [
     DatabindingHomeComponent,
     ServerElementComponent,
     DirectiveComponent,
-    HighLighterDirective
+    HighLighterDirective,
+    RoutingAdvanceComponent,
+    ObservablesComponent
 
   ],
   imports: [

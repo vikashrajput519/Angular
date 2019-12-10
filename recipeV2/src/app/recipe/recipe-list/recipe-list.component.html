@@ -27,7 +27,6 @@
 <hr>
 <div class="row">
     <div class="col-xs-12">
-        <recipe-item *ngFor='let recipeItem of recipes' [recipe]='recipeItem'
-            (listItemSelected)='listSelectedItemEmited(recipeItem)'></recipe-item>
+        <recipe-item *ngFor='let recipeItem of recipes' [recipe]='recipeItem' ></recipe-item>
     </div>
 </div>

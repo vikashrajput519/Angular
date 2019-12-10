@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Recipe } from '../model/recipe.model';
+import { RecipeService } from '../service/recipe.service';
 
 @Component({
 
@@ -11,15 +12,7 @@ import { Recipe } from '../model/recipe.model';
 
 export class ReceipeComponent implements OnInit {
 
-    recipe : Recipe;
-
     ngOnInit() {
         
-    }
-
-    listItemReceived(recipe : Recipe)
-    {
-        this.recipe = recipe;
-        console.log(recipe.name);
     }
 }
