@@ -23,6 +23,16 @@ export class AppComponent implements OnInit {
       'gender': new FormControl('Male'),
       'hobbies': new FormArray([])
     });
+    this.signUpForms.setValue({
+        'userData': {
+          'innerUsername' : 'Test',
+          'innerEmail': 'innerEmail@test.coms'
+        },
+        'username': 'Test',
+        'email': 'innerEmail@test.coms',
+        'gender': 'Male',
+        'hobbies': []
+      });
   }
 
   onSubmit() {
@@ -32,6 +42,7 @@ export class AppComponent implements OnInit {
     const control = new FormControl(null, Validators.required);
     (<FormArray>this.signUpForms.get('hobbies')).push(control);
   }
+
 
   frobiddenNames(control: FormControl): { [s: string]: boolean } {
     if (this.forbiddenUsernames.indexOf(control.value) !== -1) {
