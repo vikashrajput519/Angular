@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpDemoService } from './service/http-demo.service';
+import { Response } from '@angular/http';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +27,29 @@ export class AppComponent {
       id: this.generateId()
     });
   }
+
+  constructor(private serverService : HttpDemoService )
+  {
+  }
   private generateId() {
     return Math.round(Math.random() * 10000);
+  }
+
+  onSave()
+  {
+    this.serverService.stroreServer(this.servers).subscribe(
+      (response) => console.log(response),
+       (error) => console.log(error) 
+    );
+  }
+
+  getServers()
+  {
+    this.serverService.getServers().subscribe(
+      servers => {
+        
+      },
+      (error) => console.log(error)
+    );
   }
 }
