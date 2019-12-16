@@ -28,9 +28,7 @@ export class AppComponent {
     });
   }
 
-  constructor(private serverService : HttpDemoService )
-  {
-  }
+  constructor(private serverService : HttpDemoService ){ }
   private generateId() {
     return Math.round(Math.random() * 10000);
   }
@@ -46,8 +44,8 @@ export class AppComponent {
   getServers()
   {
     this.serverService.getServers().subscribe(
-      servers => {
-        
+      (servers) => {
+        this.servers = servers;
       },
       (error) => console.log(error)
     );

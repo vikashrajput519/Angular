@@ -23,12 +23,13 @@ export class HttpDemoService {
     return this._http.get('https://angular-http-demo-6e774.firebaseio.com/data.json').pipe(
       map(
       (response : Response ) => {
-        const data = response.json();
-        console.log(Object.values(data)[0]);
-        Object.values(data)[0];
+        const data = response.json();        
         
-        
-        return Object.values(data)[0];
+        for(const server of data )
+        {
+          server.name = "LOCAL_SERVER " + server.name;
+        }
+        return data;
       }
     )).pipe( catchError( error => {
       return throwError('Some thing went wrong')
