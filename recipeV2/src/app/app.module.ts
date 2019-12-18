@@ -13,6 +13,8 @@ import { RecipeItemComponent } from './recipe/recipe-list/recipe-item/recipe-ite
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropDownDirective } from './directive/dropdown-directive';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 const appRoutes: Routes = [
   { path : '', component : HomeComponent },
@@ -23,6 +25,7 @@ const appRoutes: Routes = [
   { path : 'receipeItems', component : RecipeItemComponent },
   { path : 'shoppingList', component : ShoppingListComponent },
   { path : 'shoppingEdit', component : ShoppingEditComponent },
+  { path : 'signup', component : SignupComponent }
 ];
 
 @NgModule({
@@ -36,7 +39,9 @@ const appRoutes: Routes = [
     HeaderComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropDownDirective
+    DropDownDirective,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
